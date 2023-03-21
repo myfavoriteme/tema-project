@@ -29,7 +29,7 @@ body{
         margin-right: 17px;
       }
       .icon__text{
-        font-size: 22px;
+        font-size: 15px;
         font-weight: 800;
         margin: 0;
         span{
@@ -44,6 +44,7 @@ body{
       // width: 633px;
       // flex-grow: 3;
       width: 50%;
+      max-width: 467px;
       ul{
         margin: 0;
         padding: 0;
@@ -70,8 +71,10 @@ body{
     .header__contacts{
       font-size: 12px;
       font-weight: 600;
+      
       ul{
         padding: 0;
+        
         li{
           list-style-type: none;
           .c-link{
@@ -88,6 +91,7 @@ body{
 .flex-r{
   display: flex;
   flex-direction: row;
+  
 }
 
 .flex-c{
@@ -102,7 +106,7 @@ body{
   background: black;
   background-color: black;
   background-image: 
-    url(../../assets/images/main2.jpg);
+    url(../assets/images/main2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;

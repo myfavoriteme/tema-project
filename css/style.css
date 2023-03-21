@@ -26,7 +26,7 @@ body {
   margin-right: 17px;
 }
 .header .header__wrapper .icon .icon__text {
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 800;
   margin: 0;
 }
@@ -35,6 +35,7 @@ body {
 }
 .header .header__wrapper .nav {
   width: 50%;
+  max-width: 467px;
 }
 .header .header__wrapper .nav ul {
   margin: 0;
@@ -85,7 +86,7 @@ body {
   height: 664px;
   background: black;
   background-color: black;
-  background-image: url(../../assets/images/main2.jpg);
+  background-image: url(../assets/images/main2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
