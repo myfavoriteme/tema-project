@@ -85,7 +85,7 @@ body {
   height: 664px;
   background: black;
   background-color: black;
-  background-image: url(assets/images/main2.jpg);
+  background-image: url(../assets/images/main2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
