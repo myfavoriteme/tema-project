@@ -7,8 +7,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  
+<body class="body">
+  <div class="overlay_b"></div>
   <!-- HEADER -->
   <header class="header">
     <div class="header__wrapper flex-r">
@@ -44,6 +44,7 @@
     <!-- WELCOME -->
 
     <section class="welcome" id="welcome">
+      <h3 class="mobile-header"><span>ТЕМА</span> БЮРО ПРОЕКТОВ</h3>
       <div class="overlay"></div>
       <div class="welcome__wrapper flex-r">
         
@@ -202,12 +203,27 @@
           <h2>ЧТО ГОВОРЯТ ГОСТИ</h2>
           <hr>
           <p>Что от сердца идет, то до сердца и доходит</p>
+
         </div>
+        <div class="reviews__container">
+          <button class="b__prev button"><img src="assets/icons/Arrow.svg" alt=""></button>
+          <!-- <div class="slider">
+            <div class="slider-line">
+              <div class="slide">1</div>
+              <div class="slide">2</div>
+              <div class="slide">3</div>
+              <div class="slide">4</div>
+            </div>
+          </div>-->
+          <button class="b__next button"><img src="assets/icons/Arrow.svg" alt=""></button>
+        </div> 
+        <!-- </div> -->
       </div>
+
     </section>
 
 <!-- CONTSCTS -->
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__wrapper flex-r">
         <h2>КОНТАКТЫ</h2>
         <div class="contacts__container flex-r">
@@ -245,5 +261,7 @@
     </div>
   </footer>
 
+
+  <script src="js/script.js"></script>
 </body>
 </html>
