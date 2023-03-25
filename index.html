@@ -20,12 +20,12 @@
 
       <nav class="nav flex-r">
         <ul class="flex-r">
-          <li><a class="nav__link" href="#">ГЛАВНАЯ</a></li>
-          <li><a class="nav__link" href="#">УСЛУГИ</a></li>
+          <li><a class="nav__link" href="#welcome">ГЛАВНАЯ</a></li>
+          <li><a class="nav__link" href="#services">УСЛУГИ</a></li>
           <!-- <li><a class="nav__link" href="#">КЛИЕНТЫ</a></li> -->
-          <li><a class="nav__link" href="#">ПОРТФОЛИО</a></li>
-          <li><a class="nav__link" href="#">ОТЗЫВЫ</a></li>
-          <li><a class="nav__link" href="#">КОНТАКТЫ</a></li>
+          <li><a class="nav__link" href="#projects">ПОРТФОЛИО</a></li>
+          <li><a class="nav__link" href="#reviews">ОТЗЫВЫ</a></li>
+          <li><a class="nav__link" href="#contacts">КОНТАКТЫ</a></li>
         </ul>
       </nav>
 
@@ -43,7 +43,7 @@
 
     <!-- WELCOME -->
 
-    <section class="welcome">
+    <section class="welcome" id="welcome">
       <div class="overlay"></div>
       <div class="welcome__wrapper flex-r">
         
@@ -131,17 +131,118 @@
 
     <!-- Services -->
 
-    <section class="services">
+    <section class="services" id="services">
       <div class="services__wrapper">
-
+        <h2 class="services__title">УСЛУГИ</h2>
+        <div class="services__container">
+          <div class="services__item item_1">
+            <div class="overlay"></div>
+            <p>ГАЛА УЖИНЫ</p> 
+          </div>
+          <div class="services__item item_2">
+            <div class="overlay"></div>
+            <p>СЮРПРИЗЫ</p>
+            
+          </div>
+          <div class="services__item item_3">
+            <div class="overlay"></div>
+            <p>КВЕСТЫ</p>
+          </div>
+          <div class="services__item item_4">
+            <div class="overlay"></div>
+            <p>ЛЕКЦИОННЫЕ МЕРОПРИЯТИЯ</p>
+          </div>
+          <div class="services__item item_5">
+            <div class="overlay"></div>
+            <p>ПРОВЕДЕНИЕ ЭКСКУРСИЙ В ЗАКРЫТЫХ МУЗЕЯХ</p>
+          </div>
+          <div class="services__item item_6">
+            <div class="overlay"></div>
+            <p>БАЛЫ И АССАМБЛЕИ</p>
+          </div>
+          <div class="services__item item_7">
+            <div class="overlay"></div>
+            <p>ФОТОСЕССИИ В ИСТОРИЧЕСКИХ КОСТЮМАХ</p>
+          </div>
+          <div class="services__item item_8">
+            <div class="overlay"></div>
+            <p>ВЫПУСКНЫЕ ВЕЧЕРА</p>
+          </div>
+        </div>
       </div>
 
     </section>
 
+    <!-- PROJECTS -->
+
+    <section class="projects" id="projects">
+      <div class="projects__wrapper">
+        <h2 class="projects__title">ГАЛЕРЕЯ</h2>
+        <div class="projects__container">
+
+          <img class="projects__item" src="assets/images/Rectangle22.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle13.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle24.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle23.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle41.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle20.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle43.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle18.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle44.png" alt="">
+          <img class="projects__item" src="assets/images/Rectangle21.png" alt="">
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="reviews__wrapper">
+        <div class="reviews__tilte">
+          <h2>ЧТО ГОВОРЯТ ГОСТИ</h2>
+          <hr>
+          <p>Что от сердца идет, то до сердца и доходит</p>
+        </div>
+      </div>
+    </section>
+
+<!-- CONTSCTS -->
+    <section class="contacts">
+      <div class="contacts__wrapper flex-r">
+        <h2>КОНТАКТЫ</h2>
+        <div class="contacts__container flex-r">
+          <ul class="contacts__num flex-c">
+            <li>
+              <a href="mailto:">ПОЧТА</a>
+            </li>
+            <li>
+              <a href="tel:+">ЗАЯВКИ</a>
+            </li>
+          </ul>
+          <ul class="contacts__social flex-r">
+            <li>
+              <a href=""><img src="assets/icons/Vk.svg" alt=""></a>
+            </li>
+            <li>
+              <a href=""><img src="assets/icons/whatsapp.svg" alt=""></a>
+            </li>
+            <li>
+              <a href=""><img src="assets/icons/Facebook.svg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-
+  <footer class="footer">
+    <div class="footer_wrapper">
+      <div class="icon flex-r">
+        <img class="icon__img" src="assets/images/logo.png" alt="">
+        <h3 class="icon__text"><span>ТЕМА</span> БЮРО ПРОЕКТОВ</h3>
+      </div>
+    </div>
   </footer>
 
 </body>
