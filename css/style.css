@@ -8,6 +8,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.burger {
+  display: none;
+}
+
 .header {
   font-family: "Inter", sans-serif;
   width: 100%;
@@ -410,6 +414,7 @@ body {
   padding-right: 10px;
   text-align: end;
   font-size: 14px;
+  word-wrap: break-word;
 }
 .reviews .reviews__wrapper .reviews__container .slider .slider-line .slide .author span {
   font-weight: 800;
@@ -702,7 +707,6 @@ body {
     height: 149px;
   }
   .reviews {
-    margin-top: 30px;
     height: 621px;
   }
   .reviews .reviews__wrapper .reviews__tilte h2 {
@@ -741,6 +745,10 @@ body {
     height: 26px;
   }
 }
+.body {
+  transition: all 0.1s;
+}
+
 .overlay_b {
   display: none;
   width: 100%;
@@ -749,23 +757,30 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(41, 41, 41, 0.6);
-  transition: all 1.5s;
+  transition: all 1s;
   z-index: 100;
 }
 
 .overlay-on {
   display: block;
+  transition: all 1s;
 }
 
 .body-hiden {
   overflow: hidden;
-  transition: all 3s;
+  transition: all 1s;
 }
 
 .burger {
-  color: #000000 !important;
+  cursor: pointer;
+  top: 15px;
   position: fixed;
-  z-index: 200;
+  right: 20px;
+  z-index: 250;
+}
+.burger img {
+  width: 30px;
+  height: 30px;
 }
 
 .mobile-header {
@@ -784,23 +799,37 @@ body {
 }
 
 @media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
   .mobile-header {
     display: block;
   }
   .header {
-    display: none;
+    width: 100%;
     background-color: #00B7D5;
   }
+  .header .header__wrapper {
+    height: 120px;
+    width: 200px;
+  }
   .header .header__wrapper .icon .icon__img {
+    display: none;
+  }
+  .header .header__wrapper .icon .icon__text {
     display: none;
   }
   .header .header__wrapper .nav {
     width: 50%;
     max-width: 467px;
   }
+  .header .header__wrapper .nav ul {
+    position: fixed;
+  }
   .header .header__wrapper .header__contacts {
     font-size: 12px;
     font-weight: 600;
+    display: none;
   }
   .header .header__wrapper .header__contacts ul {
     padding: 0;
@@ -812,10 +841,38 @@ body {
     text-decoration: none;
     color: black;
   }
+  .header .header__wrapper .burger-menu {
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background-color: #EFEFEF;
+    z-index: 150;
+    top: 0;
+    transition: all 2s;
+    padding-top: 100px;
+  }
+  .header .header__wrapper .burger-menu ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+  }
+  .header .header__wrapper .burger-menu ul li {
+    padding-bottom: 20px;
+  }
+  .header .header__wrapper .burger-menu ul li a {
+    font-size: 36px !important;
+    font-weight: 700 !important;
+  }
   .welcome {
+    position: relative;
+    top: -120px;
     height: 450px;
     background-image: url(../assets/images/main_m.png);
     background-size: auto;
+    margin-bottom: -120px;
   }
   .welcome .overlay {
     padding: 0;
@@ -982,12 +1039,18 @@ body {
     height: auto;
   }
   .reviews {
-    margin-top: 30px;
     height: 630px;
   }
   .reviews .reviews__wrapper .reviews__tilte h2 {
     margin: 0 0 10px 0;
     font-size: 36px;
+  }
+  .reviews .reviews__wrapper .reviews__container {
+    justify-content: center;
+    justify-items: center;
+  }
+  .reviews .reviews__wrapper .reviews__container .button {
+    padding: 0 20px;
   }
   .reviews .reviews__wrapper .reviews__container .button img {
     width: 15px;
@@ -1033,6 +1096,50 @@ body {
   }
   .contacts .contacts__wrapper .contacts__container .contacts__social img {
     height: 26px;
+  }
+}
+.right {
+  right: 0;
+}
+
+.left {
+  right: -32rem;
+}
+
+.block {
+  display: block !important;
+  transition: all 2s;
+}
+
+@keyframes appear {
+  from {
+    right: -32rem;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes disappear {
+  from {
+    right: 0;
+  }
+  to {
+    right: -32rem;
+  }
+}
+.transform-left {
+  animation-name: appear;
+  animation-duration: 1.5s;
+}
+
+.transform-right {
+  animation-name: disappear;
+  animation-duration: 1.5s;
+}
+
+@media (max-width: 450px) {
+  .button {
+    padding: 0 2px !important;
   }
 }
 @media (max-width: 416px) {

@@ -10,6 +10,9 @@ body{
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
+.burger{
+  display: none;
+}
 .header{
   font-family: 'Inter', sans-serif;
   width: 100%;
@@ -467,6 +470,7 @@ body{
               padding-right: 10px;
               text-align: end;
               font-size: 14px;
+              word-wrap: break-word;
               span{
                 font-weight: 800;
               }
@@ -832,7 +836,7 @@ body{
   
   .reviews{
     // width: 100%;
-    margin-top: 30px;
+    // margin-top: 30px;
     // padding-top: 10px;
     height: 621px;
     
@@ -946,6 +950,9 @@ body{
     }
   }
 }
+.body{
+  transition: all 0.1s;
+}
 .overlay_b{
   display: none;
   width: 100%;
@@ -954,20 +961,29 @@ body{
   top: 0;
   left: 0;
   background-color: rgba(41, 41, 41, 0.6);
-  transition: all 1.5s;
+  transition: all 1s;
   z-index: 100;
 }
 .overlay-on{
   display: block;
+  transition: all 1s;
 }
 .body-hiden{
   overflow: hidden;
-  transition: all 3s;
+  transition: all 1s;
 }
 .burger{
-  color: #000000 !important;
+  // color: #000000 !important;
+  cursor: pointer;
+  top: 15px;
   position: fixed;
-  z-index: 200;
+  right: 20px;
+  z-index: 250;
+  img{
+    width: 30px;
+    height: 30px;
+    
+  }
 }
 .welcome{}
 .mobile-header{
@@ -985,20 +1001,26 @@ body{
     display: block;
   }
 }
+
 @media (max-width: 768px) {
+  .burger{
+    display: block;
+  }
   .mobile-header{
     display: block;
   }
   .header{
-    display: none;
+    width: 100%;
     background-color: #00B7D5;
     .header__wrapper{
+      height: 120px;
+      width: 200px;
         .icon{
         .icon__img{
           display: none;
         }
         .icon__text{
-
+          display: none;
 
           span{
           }
@@ -1010,6 +1032,7 @@ body{
         width: 50%;
         max-width: 467px;
         ul{
+          position: fixed;
           li{
             .nav__link{
             }
@@ -1020,7 +1043,7 @@ body{
       .header__contacts{
         font-size: 12px;
         font-weight: 600;
-        
+        display: none;
         ul{
           padding: 0;
           
@@ -1033,14 +1056,42 @@ body{
           }
         }
       }
+      .burger-menu{
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        width: 320px;
+        height: 100%;
+        background-color: #EFEFEF;
+        z-index: 150;
+        top: 0;
+        transition: all 2s;
+        padding-top: 100px ;
+        ul{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 320px;
+          li{
+            padding-bottom: 20px;
+            a{
+              font-size: 36px !important;
+              font-weight: 700 !important;
+            }
+          }
+        }
+      }
   
     }
   }
   
   .welcome{
+    position: relative;
+    top: -120px;
     height: 450px;
     background-image: url(../assets/images/main_m.png);
     background-size: auto;
+    margin-bottom: -120px;
     .overlay{
       padding: 0;
 
@@ -1109,8 +1160,6 @@ body{
           line-height: 27px;
         }
         img{
-          // position: relative;
-
           position: static;
           top: -15px;
           left: 25px;
@@ -1138,11 +1187,7 @@ body{
   .ad{
     .ad__wrapper{
       padding: 25px 10px;
-      // margin: 0 auto;
-      // max-width: 1200px;
-      // justify-content: space-between;
-      // align-items: center;
-      flex-direction: column-reverse;
+        flex-direction: column-reverse;
 
       .ad__cont{
         max-width: 100%;
@@ -1186,9 +1231,7 @@ body{
 
   .services{
     .services__wrapper{
-      // margin-top: 70px;
-      // margin: 0 auto;
-      // max-width: 1200px;
+
       padding: 60px 0;
       .services__title{
         margin-left: 10px;
@@ -1257,9 +1300,8 @@ body{
   }
   
   .reviews{
-    // width: 100%;
-    margin-top: 30px;
-    // padding-top: 10px;
+  
+    // margin-top: 30px;
     height: 630px;
     
     // background: #EFEFEF;
@@ -1297,13 +1339,15 @@ body{
         // display: flex;
         // height: 450px;
         // align-items: center;
-        
+        justify-content: center;
+        justify-items: center;
         .b__next{
           img{
             // transform: rotate(180deg);
           }
         }
         .button{
+          padding: 0 20px;
           // z-index: 20;
           // cursor: pointer;
           // background: transparent;
@@ -1334,6 +1378,7 @@ body{
                 max-width: 80%;
               }
               .author{
+                
                 span{
                 }
               }
@@ -1379,6 +1424,64 @@ body{
     }
   }
 }
+.right{
+  right: 0;
+}
+.left{
+  right: -32rem;
+}
+.block{
+  display: block !important;
+  transition: all 2s;
+}
+@keyframes appear {
+  from {
+    right: -32rem;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes disappear {
+  from {
+    right: 0;
+  }
+  to {
+    right: -32rem;
+  }
+}
+// @keyframes blur_on {
+//   from {
+//     filter: blur();
+//   }
+//   to {
+//     filter: blur(2px);
+//   }
+// }
+// @keyframes blur_of {
+//   from {
+//     filter: blur(2px);
+//   }
+//   to {
+//     filter: blur(0);
+//   }
+// }
+.transform-left {
+  animation-name: appear;
+  animation-duration: 1.5s;
+}
+
+.transform-right {
+  animation-name: disappear;
+  animation-duration: 1.5s;
+}
+
+@media (max-width: 450px) {
+  .button{
+    padding: 0 2px!important;
+
+  }
+}
 
 @media (max-width: 416px) {
   .services__item{
@@ -1389,4 +1492,7 @@ body{
     height: 150px !important;
     background: gray;
   }
+
 }
+
+
