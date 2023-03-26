@@ -21,7 +21,7 @@ body {
 .header .header__wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 26px 10px;
+  padding: 20px 10px;
   justify-content: space-between;
 }
 .header .header__wrapper .icon {
@@ -73,10 +73,14 @@ body {
 }
 .header .header__wrapper .header__contacts ul li {
   list-style-type: none;
+  padding: 5px 0;
 }
 .header .header__wrapper .header__contacts ul li .c-link {
   text-decoration: none;
   color: black;
+}
+.header .header__wrapper .header__contacts ul li .wpp {
+  padding-left: 7px;
 }
 
 .flex-r {
@@ -115,6 +119,7 @@ body {
   height: 100%;
 }
 .welcome .welcome__wrapper .welcome__text {
+  text-transform: uppercase;
   color: #fff;
   z-index: 3;
   align-self: center;
@@ -1125,10 +1130,12 @@ body {
 }
 .right {
   right: 0;
+  transition: all 1s;
 }
 
 .left {
   right: -32rem;
+  transition: all 1s;
 }
 
 .block {

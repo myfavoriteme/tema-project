@@ -22,7 +22,7 @@ body{
 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 26px 10px;
+    padding: 20px 10px;
     justify-content: space-between;
 
     .icon{
@@ -83,9 +83,13 @@ body{
         
         li{
           list-style-type: none;
+          padding: 5px 0;
           .c-link{
             text-decoration: none;
             color: black;
+          }
+          .wpp{
+            padding-left: 7px;
           }
         }
       }
@@ -132,7 +136,7 @@ body{
     max-width: 1200px;
     height: 100%;
     .welcome__text{
-      
+      text-transform: uppercase;
       color: #fff;
       z-index: 3;
       align-self: center;
@@ -1459,9 +1463,11 @@ body{
 }
 .right{
   right: 0;
+  transition: all 1s;
 }
 .left{
   right: -32rem;
+  transition: all 1s;
 }
 .block{
   display: block !important;

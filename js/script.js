@@ -6,23 +6,28 @@ const next = document.querySelector('.b__next');
 const screenWidth = window.innerWidth;
 
 let slideWidth = 745;
-let lineWidth = 5495;
+
 let margin = 40;
+let slidersNum = sliders.length;
+console.log(slidersNum)
+
 
 if (screenWidth >= 1280) {
   slideWidth = 745;
-  lineWidth = 5495;
+  // lineWidth = 5495;
   margin = 40;
 }
 if (screenWidth < 1280) {
   slideWidth = 600;
-  lineWidth = 4480;
+  // lineWidth = 4480;
 }
 if(screenWidth <= 768){
   slideWidth = 290;
   margin = 10;
-  lineWidth = 2120;
+  // lineWidth = 2120;
 }
+
+let lineWidth = (slidersNum - 1) * (margin + slideWidth);
 
 const sStyles = window.getComputedStyle(document.querySelector('.slide')); 
 // const w = document.querySelector('.slide').offsetWidth;
