@@ -661,6 +661,7 @@ body{
       margin: 0 auto;
       max-width: 1200px;
       height: 100%;
+      justify-content: center;
       .welcome__text{
         
         color: #fff;
@@ -670,15 +671,15 @@ body{
         h1{
           margin: 230px 0 0 0;
           font-weight: 800px;
-          font-size: 36px;
-          line-height: 44px;
+          font-size: 28px;
+          line-height: 36px;
           span{
-            
             display: block;
           }
         }
         p{
-          margin: 7px 0;
+          text-align: center;
+          margin: 17px 0;
           font-weight: 600;
           font-size: 13px;
           line-height: 16px;
