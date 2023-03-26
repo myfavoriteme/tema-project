@@ -1339,6 +1339,7 @@ body{
         // display: flex;
         // height: 450px;
         // align-items: center;
+        // padding: 0 5px;
         justify-content: center;
         justify-items: center;
         .b__next{
@@ -1424,6 +1425,38 @@ body{
     }
   }
 }
+
+.footer{
+  width: 100%;
+  height: 80px;
+  .footer_wrapper{
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .icon{
+      justify-content: space-between;
+      
+      align-items: center;
+      .icon__img{
+        width: 48px;
+        height: 48px;
+        // margin-right: 17px;
+      }
+      .icon__text{
+        font-size: 14px;
+        font-weight: 800;
+        margin: 0;
+        span{
+          // display: block;
+        }
+      }
+    }
+  }
+}
 .right{
   right: 0;
 }
@@ -1434,22 +1467,22 @@ body{
   display: block !important;
   transition: all 2s;
 }
-@keyframes appear {
-  from {
-    right: -32rem;
-  }
-  to {
-    right: 0;
-  }
-}
-@keyframes disappear {
-  from {
-    right: 0;
-  }
-  to {
-    right: -32rem;
-  }
-}
+// @keyframes appear {
+//   from {
+//     right: -32rem;
+//   }
+//   to {
+//     right: 0;
+//   }
+// }
+// @keyframes disappear {
+//   from {
+//     right: 0;
+//   }
+//   to {
+//     right: -32rem;
+//   }
+// }
 // @keyframes blur_on {
 //   from {
 //     filter: blur();
@@ -1466,15 +1499,15 @@ body{
 //     filter: blur(0);
 //   }
 // }
-.transform-left {
-  animation-name: appear;
-  animation-duration: 1.5s;
-}
+// .transform-left {
+//   animation-name: appear;
+//   animation-duration: 1.5s;
+// }
 
-.transform-right {
-  animation-name: disappear;
-  animation-duration: 1.5s;
-}
+// .transform-right {
+//   animation-name: disappear;
+//   animation-duration: 1.5s;
+// }
 
 @media (max-width: 450px) {
   .button{
