@@ -434,7 +434,7 @@ body{
         width: 785px;
         // width: 90%;
         height: 380px;
-        border: 2px solid black;
+        // border: 2px solid black;
         overflow: hidden;
         .slider-line{
           margin-top: 20px;
@@ -1484,6 +1484,12 @@ body{
 }
 
 @media (max-width: 416px) {
+  .reviews__tilte{
+    h2{
+      font-size: 28px !important;
+    }
+    
+  }
   .services__item{
 
     width: 150px !important;
